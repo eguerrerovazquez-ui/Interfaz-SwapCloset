@@ -1,14 +1,10 @@
 import { Component } from '@angular/core';
 import {
-  IonContent,
-  IonHeader,
   IonIcon,
   IonTab,
   IonTabBar,
   IonTabButton,
   IonTabs,
-  IonTitle,
-  IonToolbar,
 } from '@ionic/angular';
 
 import { addIcons } from 'ionicons';
@@ -18,7 +14,7 @@ import { library, playCircle, radio, search } from 'ionicons/icons';
   selector: 'app-nav-bar',
   templateUrl: 'nav-bar.html',
   styleUrls: ['nav-bar.css'],
-  imports: [IonContent, IonHeader, IonIcon, IonTab, IonTabBar, IonTabButton, IonTabs, IonTitle, IonToolbar],
+  imports: [IonTabs, IonTabBar, IonTabButton, IonIcon],
 })
 export class NavBar {
   constructor() {

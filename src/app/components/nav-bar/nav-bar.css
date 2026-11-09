@@ -1,8 +1,28 @@
-/* This style is for demonstration purposes only. */
-/* It's not required for the tabs to function. */
-.example-content {
+ion-tab-bar {
   display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  height: 100%;
+  width: 100%;
 }
+
+ion-tab-button {
+  --padding-top: 8px;
+  --padding-bottom: 8px;
+  flex: 1;
+}
+
+ion-tab-button::part(native) {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+ion-tab-button ion-icon {
+  font-size: 40px; /* Tamaño del icono */
+  width: 40px;     /* Fuerza el ancho para el SVG */
+  height: 40px;    /* Fuerza el alto para el SVG */
+  color: #000000;  /* Color negro por defecto (o el que quieras) */
+}
+
