@@ -1,1 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
+/* 1. Definimos el color de fondo global de la app */
+:root {
+  --ion-background-color: #FFEFE6 !important; /* Tu color melocotón */
+}
+
+/* 2. Forzamos a que el contenido de las páginas use ese color */
+ion-content {
+  --background: #FFEFE6 !important;
+}
+
+/* 3. Nos aseguramos de que los contenedores base no tengan un fondo blanco que tape el tuyo */
+body, ion-app, ion-router-outlet, .ion-page {
+  background-color: #FFEFE6 !important;
+}

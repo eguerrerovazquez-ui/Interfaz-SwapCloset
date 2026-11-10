@@ -4,12 +4,29 @@ ion-tab-bar {
   justify-content: space-around;
   align-items: center;
   width: 100%;
+
+  --background: #ffffff;
+  background: #ffffff;
+
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  width: auto;
+
+  border-radius: 40px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  height: 85px;
+  overflow: hidden;
+
 }
 
 ion-tab-button {
   --padding-top: 8px;
   --padding-bottom: 8px;
   flex: 1;
+  --color: #FFB58A;
+  --color-selected: #FF7B2E;
 }
 
 ion-tab-button::part(native) {
@@ -23,6 +40,12 @@ ion-tab-button ion-icon {
   font-size: 40px; /* Tamaño del icono */
   width: 40px;     /* Fuerza el ancho para el SVG */
   height: 40px;    /* Fuerza el alto para el SVG */
-  color: #000000;  /* Color negro por defecto (o el que quieras) */
+  color: var(--color);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+ion-tab-button.tab-selected ion-icon {
+  color: var(--color-selected);
+  transform: scale(1.1); /* Efecto de zoom (opcional) */
 }
 
