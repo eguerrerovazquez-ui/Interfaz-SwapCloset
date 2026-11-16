@@ -1,12 +1,20 @@
 import { Component } from '@angular/core';
-import {IonContent} from '@ionic/angular';
+import {IonBadge, IonContent, IonHeader, IonIcon, IonTabButton, IonTitle, IonToolbar} from '@ionic/angular';
 
 @Component({
   imports: [
-    IonContent
+    IonHeader,
+    IonToolbar,
+    IonTitle,
+    IonTabButton,
+    IonIcon,
+    IonBadge
   ],
   selector: 'app-home',
   styleUrl: './home.css',
   templateUrl: './home.html',
 })
-export class Home {}
+export class Home {
+
+  tieneNotificaciones: boolean = true;
+}

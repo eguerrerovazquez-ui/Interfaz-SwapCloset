@@ -1,0 +1,42 @@
+ion-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top:30px;
+}
+
+ion-title{
+  font-family:'Hurricane';
+  font-size:50px;
+  text-shadow: 0 4px 4px #707070;
+}
+
+.campana{
+  width:40px;
+  font-size:40px;
+  padding:10px;
+}
+
+.login{
+  width:40px;
+  font-size:40px;
+  padding:10px;
+}
+
+.notis{
+  position:relative;
+}
+
+.notificacion {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  --padding-start: 0;
+  --padding-end: 0;
+  --background: #FF0000;
+  background-color: #FF0000;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
