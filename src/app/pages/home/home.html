@@ -10,3 +10,17 @@
     <ion-icon class="login" src="/assets/icons/Login.svg"></ion-icon>
   </ion-tab-button>
 </ion-header>
+<ion-content>
+  <div class="historias">
+    @for (story of story; track story.id){
+      <app-story [story]="story"></app-story>
+    }
+  </div>
+
+  <div class="publicaciones">
+    @for (publi of publi; track publi.id){
+      <app-publicaciones [publicaciones]="publi"></app-publicaciones>
+    }
+  </div>
+  <div class="espaciador"></div>
+</ion-content>

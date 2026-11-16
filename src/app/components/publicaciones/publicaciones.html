@@ -1,0 +1,21 @@
+<div class="post-wrapper">
+  <div class="top">
+    <div class="profile">
+      <img [src]="publicaciones.userPfp"/>
+      <p>{{publicaciones.userName}}</p>
+    </div>
+    <div class="options"></div>
+  </div>
+  <img [src]="publicaciones.userImage"/>
+  <div class="bottom">
+    <div class="interactions">
+      <button class="like" [class.postLiked]="postLiked" (click)=toggleLike()>
+        <ion-icon src="/assets/icons/heart.svg"></ion-icon>
+      </button>
+      <ion-icon class="chat-icon" src="/assets/icons/message-circle.svg"></ion-icon>
+    </div>
+    <div class="state">
+      <p>{{publicaciones.type}}</p>
+    </div>
+  </div>
+</div>

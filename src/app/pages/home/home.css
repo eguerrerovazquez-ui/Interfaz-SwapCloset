@@ -40,3 +40,29 @@ ion-title{
   border-radius: 50%;
   border: 2px solid white;
 }
+
+.historias {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  padding: 16px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  justify-content: space-evenly;
+  height: 120px;
+}
+
+.publicaciones{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 16px;
+}
+
+.espaciador{
+  height: 120px;
+  width: 100%;
+}
+
+

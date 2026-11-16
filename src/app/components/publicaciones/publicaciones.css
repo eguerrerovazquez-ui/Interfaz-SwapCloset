@@ -1,0 +1,145 @@
+
+/* Contenedor principal de la tarjeta */
+.post-wrapper {
+  background-color: #ffffff;
+  border-radius: 24px;
+  padding: 16px;
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); /* Le bajé un poco la sombra para que no sea tan dura */
+}
+
+/* --- CABECERA --- */
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.options {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* --- IMAGEN PRINCIPAL --- */
+.post-wrapper > img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+}
+
+/* --- SECCIÓN INFERIOR --- */
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 4px;
+}
+
+.interactions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* --- BOTÓN DEL CORAZÓN (Fondo transparente, solo el icono) --- */
+.like {
+  background: transparent !important; /* Quitamos cualquier fondo de Ionic */
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s ease;
+}
+
+.like:hover {
+  transform: scale(1.1);
+}
+
+/* ICONO INACTIVO: Lo forzamos a ser Naranja */
+.like ion-icon {
+  font-size: 25px;
+  /* Este filtro convierte el SVG a naranja (#FFB58A) */
+  filter: invert(78%) sepia(21%) saturate(1200%) hue-rotate(320deg) brightness(100%) contrast(101%);
+  /* Nos aseguramos de que no tenga fondo */
+  background: transparent !important;
+  --color: transparent !important;
+}
+
+/* --- ESTADO ACTIVO --- */
+/* Cuando se activa, el icono se vuelve BLANCO PURO */
+.like.postLiked ion-icon {
+  /* Este filtro vuelve el SVG blanco */
+  filter: brightness(0) invert(1);
+  font-size: 25px;
+}
+
+/* El fondo del botón con el gradiente circular */
+.like.postLiked {
+  background: linear-gradient(45deg, #FF7B2E, #FF00EE) !important;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(255, 0, 238, 0.3);
+}
+
+/* --- EL ICONO DEL CHAT --- */
+.chat-icon {
+  font-size: 25px; /* Ajusta el tamaño para que sea igual que el del corazón */
+  cursor: pointer;
+  transition: transform 0.2s ease;
+
+  /* Este es el mismo filtro que usamos en el corazón inactivo */
+  filter: invert(78%) sepia(21%) saturate(1200%) hue-rotate(320deg) brightness(100%) contrast(101%);
+}
+
+.chat-icon:hover {
+  transform: scale(1.1);
+}
+
+/* 4. LA ETIQUETA DE ESTADO */
+.state {
+  background-color: #A5F3C1; /* Verde pastel (cámbialo a #FF8BEB si lo quieres rosa) */
+  padding: 6px 16px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.state p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000;
+}

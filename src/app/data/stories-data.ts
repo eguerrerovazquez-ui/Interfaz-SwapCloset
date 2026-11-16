@@ -1,28 +1,28 @@
 import {Stories} from '../models/stories';
 
-export const story: Stories[] = [
+export const mock_story: Stories[] = [
   {
     id: 1,
-    userImage: "assets/pruebas/stories/Sa_Mateo.png",
+    userImage: "assets/stories/img1.png",
     userName: "Sa_Mateo",
-    userSeen: false
+    userSeen: true
   },
   {
     id: 2,
-    userImage: "assets/pruebas/stories/LauraCruz_24.png",
+    userImage: "assets/stories/img2.png",
     userName: "LauraCruz_24",
-    userSeen: false
+    userSeen: true
   },
   {
     id: 3,
-    userImage: "assets/pruebas/stories/SofySG.png",
+    userImage: "assets/stories/img3.png",
     userName: "SofySG",
-    userSeen: false
+    userSeen: true
   },
   {
     id: 4,
-    userImage: "assets/pruebas/stories/Felipesfc.png",
+    userImage: "assets/stories/img4.png",
     userName: "Felipesfc",
-    userSeen: false
+    userSeen: true
   }
 ]
