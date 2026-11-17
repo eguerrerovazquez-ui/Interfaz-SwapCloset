@@ -9,7 +9,7 @@
   <img [src]="publicaciones.userImage"/>
   <div class="bottom">
     <div class="interactions">
-      <button class="like" [class.postLiked]="postLiked" (click)=toggleLike()>
+      <button class="like" [class.postLiked]="publicaciones.postLiked" (click)="toggleLike()">
         <ion-icon src="/assets/icons/heart.svg"></ion-icon>
       </button>
       <ion-icon class="chat-icon" src="/assets/icons/message-circle.svg"></ion-icon>

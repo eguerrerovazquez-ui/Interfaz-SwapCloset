@@ -2,13 +2,39 @@ ion-header{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top:30px;
+  margin-top:10px;
+  background: transparent !important;
+  border: none !important;
+  padding: 0;
+}
+
+.custom-toolbar {
+  --background: transparent !important;
+  --border-width: 0 !important;
+  --min-height: 80px; /* Ajusta la altura si lo ves muy apretado */
+  margin-top: 10px;
+}
+
+/* Estilos de los botones (para quitarles el fondo gris por defecto) */
+.notis, .login-btn {
+  background: transparent !important; /* Quita el fondo gris */
+  border: none !important;            /* Quita cualquier borde */
+  box-shadow: none !important;        /* Quita sombras internas */
+  padding: 10px;
+  position: relative;
+  cursor: pointer;
+
+  /* Para que se centren bien en el header */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 ion-title{
   font-family:'Hurricane';
   font-size:50px;
   text-shadow: 0 4px 4px #707070;
+  text-align: center;
 }
 
 .campana{
@@ -23,22 +49,25 @@ ion-title{
   padding:10px;
 }
 
-.notis{
-  position:relative;
+.notis {
+  position: relative; /* Vital para que el punto se posicione respecto a la campana */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .notificacion {
   position: absolute;
-  top: 5px;
-  right: 5px;
-  --padding-start: 0;
-  --padding-end: 0;
-  --background: #FF0000;
-  background-color: #FF0000;
-  width: 20px;
+  top: 15px;   /* Ajusta esto si quieres subirlo o bajarlo */
+  right: 15px; /* Ajusta esto si quieres moverlo a la derecha */
+
+  width: 20px; /* Tamaño del punto */
   height: 20px;
-  border-radius: 50%;
-  border: 2px solid white;
+  background-color: #FF0000; /* Rojo puro */
+  border-radius: 50%; /* Lo hace redondo */
+
+  border: 2px solid white; /* Borde blanco para que resalte */
+  z-index: 10; /* Para que se pinte por encima de la campana */
 }
 
 .historias {

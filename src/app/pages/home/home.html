@@ -1,14 +1,28 @@
-<ion-header>
-  <ion-tab-button class="notis">
-    <ion-icon class="campana" src="/assets/icons/Bell.svg"></ion-icon>
-    @if (tieneNotificaciones){<ion-badge color="danger" class="notificacion"></ion-badge>}
-  </ion-tab-button>
-  <ion-toolbar>
+<ion-header class="ion-no-border">
+  <ion-toolbar class="custom-toolbar">
+
+    <!-- Botón de la campana (Izquierda) -->
+    <ion-buttons slot="start">
+      <button class="notis">
+        <ion-icon class="campana" src="/assets/icons/Bell.svg"></ion-icon>
+
+        @if (tieneNotificaciones) {
+          <div class="notificacion"></div>
+        }
+      </button>
+    </ion-buttons>
+
+    <!-- Título (Centro) -->
     <ion-title>SwapCloset</ion-title>
+
+    <!-- Botón de login (Derecha) -->
+    <ion-buttons slot="end">
+      <button class="login-btn" >
+        <ion-icon class="login" src="/assets/icons/Login.svg"></ion-icon>
+      </button>
+    </ion-buttons>
+
   </ion-toolbar>
-  <ion-tab-button>
-    <ion-icon class="login" src="/assets/icons/Login.svg"></ion-icon>
-  </ion-tab-button>
 </ion-header>
 <ion-content>
   <div class="historias">

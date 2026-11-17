@@ -1,6 +1,18 @@
-<ion-content>
-  <!-- Llamamos al componente y le decimos que escuche el evento 'search' -->
-  <app-busqueda (search)="buscar($event)"></app-busqueda>
+<ion-header class="ion-no-border">
 
-  <!-- Aquí iría el resto de tu contenido -->
+    <app-busqueda (search)="buscar($event)"></app-busqueda>
+
+</ion-header>
+<!-- La barra de busqueda no sale pero hay persistencia de likes -->
+
+<ion-content>
+  <div class="grid-favoritos">
+    @for (publi of publicaciones; track publi.id) {
+
+      @if (publi.postLiked === true) {
+        <app-publicaciones [publicaciones]="publi"></app-publicaciones>
+      }
+
+    }
+  </div>
 </ion-content>

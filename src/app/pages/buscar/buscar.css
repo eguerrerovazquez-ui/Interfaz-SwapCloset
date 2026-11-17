@@ -1,0 +1,13 @@
+/* 1. Contenedor de la barra */
+.contenedor-busqueda {
+  width: 100%;
+  padding: 16px 16px 0 16px; /* Margen por los lados y arriba */
+  background-color: transparent;
+}
+
+/* 2. FORZAMOS EL TAMAÑO DEL COMPONENTE */
+app-busqueda {
+  display: block;
+  width: 100%;
+  min-height: 60px; /* Le damos una altura mínima para que se dibuje */
+}

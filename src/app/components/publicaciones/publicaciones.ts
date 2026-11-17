@@ -1,7 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectorRef, Component, Input } from '@angular/core';
 import { Publi } from '../../models/publi';
 import { CommonModule } from '@angular/common';
 import { IonIcon } from '@ionic/angular';
+import { PublicacionesService } from '../../services/publicaciones';
 
 @Component({
   imports: [IonIcon],
@@ -13,9 +14,16 @@ import { IonIcon } from '@ionic/angular';
 export class Publicaciones {
   @Input() publicaciones!: Publi;
 
-  postLiked: boolean = false;
+  constructor(
+    private publicacionesService: PublicacionesService,
+    private cdr: ChangeDetectorRef, // 2. Lo inyectamos
+  ) {}
 
   toggleLike() {
-    this.postLiked = !this.postLiked;
+    // 3. El servicio cambia el dato
+    this.publicacionesService.toggleLike(this.publicaciones.id);
+
+    // 4. ¡Le decimos a Angular que revise el HTML AHORA MISMO!
+    this.cdr.detectChanges();
   }
 }

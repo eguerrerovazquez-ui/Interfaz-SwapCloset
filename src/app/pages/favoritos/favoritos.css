@@ -1,0 +1,58 @@
+/* Fijamos la barra arriba */
+.search-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #FFEFE6; /* Tu color de fondo para que no se vea transparente */
+  padding: 10px 0;
+}
+
+/* Aseguramos que la cuadrícula se dibuje debajo */
+.grid-favoritos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  padding: 16px;
+  margin-bottom: 120px;
+  /* IMPORTANTE: Aseguramos que no se colapse */
+  width: 100%;
+}
+
+/* 2. El componente de la tarjeta ocupa el 100% de su columna */
+::ng-deep .grid-favoritos app-publicaciones {
+  display: block;
+  width: 100%;
+}
+
+/* 3. La tarjeta interna (quitamos márgenes y hacemos que se vea) */
+::ng-deep .grid-favoritos app-publicaciones .post-wrapper {
+  margin: 0 !important;
+  padding: 8px !important;
+  display: flex !important;
+  flex-direction: column;
+  gap: 8px !important;
+  height: auto; /* Deja que la tarjeta crezca según su contenido */
+}
+
+/* 4. La imagen principal (más pequeña) */
+::ng-deep .grid-favoritos app-publicaciones .post-wrapper > img {
+  height: 140px !important; /* Ajusta este alto a tu gusto */
+  width: 100% !important;
+  object-fit: cover !important;
+  border-radius: 8px !important;
+}
+
+/* 5. El avatar y el nombre (más pequeños) */
+::ng-deep .grid-favoritos app-publicaciones .profile img {
+  width: 24px !important;
+  height: 24px !important;
+}
+
+::ng-deep .grid-favoritos app-publicaciones .profile p {
+  font-size: 12px !important;
+}
+
+/* 6. Ocultamos los botones de abajo para que no ocupe espacio */
+::ng-deep .grid-favoritos app-publicaciones .bottom {
+  display: none !important;
+}
