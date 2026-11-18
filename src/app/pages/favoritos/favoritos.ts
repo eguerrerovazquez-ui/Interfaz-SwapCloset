@@ -7,7 +7,7 @@ import { PublicacionesService } from '../../services/publicaciones';
 import { Publi } from '../../models/publi';
 
 @Component({
-  imports: [Busqueda, IonContent, Publicaciones, CommonModule, IonHeader, IonToolbar],
+  imports: [Busqueda, IonContent, Publicaciones, CommonModule, IonHeader],
   selector: 'app-favoritos',
   styleUrl: './favoritos.css',
   templateUrl: './favoritos.html',

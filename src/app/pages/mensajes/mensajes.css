@@ -1,0 +1,15 @@
+h1{
+  margin-bottom: 50px;
+  font-family: 'Hurricane';
+  font-size: 50px;
+  text-align: center;
+  margin-top: 20px;
+  text-shadow: 0 4px 4px #707070 ;
+}
+
+.separacion{
+  padding: 0 16px 120px 16px; /* Padding a los lados y abajo para la navbar */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

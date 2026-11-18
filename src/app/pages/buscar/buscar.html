@@ -2,4 +2,10 @@
   <div class="contenedor-busqueda">
     <app-busqueda (search)="buscar($event)"></app-busqueda>
   </div>
+
+  <div>
+    @for (usuario of usuariosFiltrados; track usuario.id){
+      <app-tarjeta-perfil [stories]="usuario"></app-tarjeta-perfil>
+    }
+  </div>
 </ion-content>

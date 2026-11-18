@@ -1,1 +1,13 @@
-<p>mensajes works!</p>
+<ion-content>
+
+  <h1>
+    Chats
+  </h1>
+
+  <div class="separacion">
+    @for(mensaje of msg; track mensaje.id){
+      <app-tarjeta-perfil [stories]="mensaje"></app-tarjeta-perfil>
+    }
+  </div>
+
+</ion-content>

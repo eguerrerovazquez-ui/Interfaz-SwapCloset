@@ -1,9 +1,8 @@
 import {Component, Output, EventEmitter} from '@angular/core';
-import {IonContent, IonSearchbar} from '@ionic/angular';
+import {IonSearchbar} from '@ionic/angular';
 
 @Component({
   imports: [
-    IonContent,
     IonSearchbar
   ],
   standalone: true,

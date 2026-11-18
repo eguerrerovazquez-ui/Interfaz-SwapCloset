@@ -1,0 +1,43 @@
+/* 1. El contenedor principal de la tarjeta */
+.tarjeta {
+  display: flex;
+  align-items: center; /* Centra la foto y el texto verticalmente */
+  gap: 16px;           /* Espacio entre la foto y el nombre */
+
+  /* Estilos visuales basados en tu captura */
+  background-color: #ffffff;
+  padding: 12px 16px;
+  border-radius: 40px;
+
+  /* La misma sombra suave de tus otras tarjetas */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+
+  /* Para que no se peguen unas a otras */
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+/* Pequeña animación al pasar el ratón */
+.tarjeta:hover {
+  transform: scale(1.02);
+}
+
+/* 2. La foto de perfil */
+.tarjeta img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /* La hace redonda */
+  object-fit: cover;  /* Evita que la foto se deforme */
+  border: 2px solid #FFEFE6; /* Un pequeño borde color melocotón para que resalte */
+}
+
+/* 3. El nombre de usuario */
+.tarjeta p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+}
