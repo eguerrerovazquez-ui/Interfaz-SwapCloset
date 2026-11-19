@@ -1,3 +1,12 @@
+h1{
+  margin-bottom: 20px;
+  font-family: 'Hurricane';
+  font-size: 50px;
+  text-align: center;
+  margin-top: 20px;
+  text-shadow: 0 4px 4px #707070 ;
+}
+
 /* 1. Contenedor de la barra */
 .contenedor-busqueda {
   width: 100%;

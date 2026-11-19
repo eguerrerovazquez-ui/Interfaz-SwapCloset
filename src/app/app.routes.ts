@@ -16,8 +16,11 @@ export const routes: Routes = [
       {path: 'favoritos', component: Favoritos},
       {path: 'buscar', component: Buscar},
       {path: 'mensajes', component: Mensajes},
-      {path: 'perfil', component: Perfil}
+      {path: 'perfil-usuario', component: Perfil}
     ]
+  },
+  {
+    path:'perfil/:userName', component: Perfil
   },
   { path: '**', redirectTo: 'home' }
 ];

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonContent } from '@ionic/angular';
+import {IonContent, IonHeader} from '@ionic/angular';
 import { CommonModule } from '@angular/common';
 import { Busqueda } from '../../components/busqueda/busqueda';
 import { TarjetaPerfil } from '../../components/tarjeta-perfil/tarjeta-perfil';
@@ -9,7 +9,7 @@ import { mock_story } from '../../data/stories-data';
 @Component({
   selector: 'app-buscar',
   standalone: true,
-  imports: [IonContent, CommonModule, Busqueda, TarjetaPerfil],
+  imports: [IonContent, CommonModule, Busqueda, TarjetaPerfil, IonHeader],
   templateUrl: './buscar.html',
   styleUrl: './buscar.css',
 })

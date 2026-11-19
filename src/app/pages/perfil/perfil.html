@@ -1,1 +1,19 @@
-<p>perfil works!</p>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/buscar"></ion-back-button>
+    </ion-buttons>
+    <!-- Muestra el nombre en la barra superior si existe -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  @if (datos) {
+    <div class="perfil-detalle">
+      <img [src]="datos.userPfp" class="img-perfil">
+      <h1>{{ datos.userName }}</h1>
+    </div>
+  } @else {
+    <p>No se encontraron datos para este usuario.</p>
+  }
+</ion-content>

@@ -1,3 +1,12 @@
+h1{
+  margin-bottom: 20px;
+  font-family: 'Hurricane';
+  font-size: 50px;
+  text-align: center;
+  margin-top: 20px;
+  text-shadow: 0 4px 4px #707070 ;
+}
+
 /* Fijamos la barra arriba */
 .search-header {
   position: sticky;

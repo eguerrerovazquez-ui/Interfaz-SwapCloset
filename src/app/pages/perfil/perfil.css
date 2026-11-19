@@ -1,0 +1,21 @@
+ion-header{
+  background-color: transparent;
+}
+
+.perfil-detalle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.img-perfil{
+  border-radius: 100%;
+  margin: 30px;
+  width: 65%;
+  height: 65%;
+}
+
+h1{
+  text-align: center;
+}

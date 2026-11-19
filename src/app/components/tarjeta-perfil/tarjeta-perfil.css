@@ -25,6 +25,12 @@
   transform: scale(1.02);
 }
 
+.tarjeta-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 /* 2. La foto de perfil */
 .tarjeta img {
   width: 60px;

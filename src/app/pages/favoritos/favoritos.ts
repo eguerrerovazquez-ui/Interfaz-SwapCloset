@@ -18,6 +18,7 @@ export class Favoritos {
 
   constructor(private publicacionesService: PublicacionesService) {}
 
+
   // Se ejecuta la primera vez que se crea el componente
   ngOnInit() {
     this.publicaciones = this.publicacionesService.publicaciones;
