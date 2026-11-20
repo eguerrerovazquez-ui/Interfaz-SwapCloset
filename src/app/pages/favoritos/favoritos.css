@@ -16,6 +16,24 @@ h1{
   padding: 10px 0;
 }
 
+.filtros{
+  display: flex;
+  justify-content: space-evenly !important;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.filtros button{
+  background-color: #FFB58A;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+.filtros button.activo {
+  background-color: #FF7B2E;
+  font-weight: bold;
+}
+
 /* Aseguramos que la cuadrícula se dibuje debajo */
 .grid-favoritos {
   display: grid;

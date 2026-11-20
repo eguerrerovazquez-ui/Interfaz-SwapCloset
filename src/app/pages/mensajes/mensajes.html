@@ -6,7 +6,7 @@
 
   <div class="separacion">
     @for(mensaje of msg; track mensaje.id){
-      <app-tarjeta-perfil [stories]="mensaje"></app-tarjeta-perfil>
+      <app-tarjeta-perfil [rutaDestino]="'chat-interno'" [stories]="mensaje"></app-tarjeta-perfil>
     }
   </div>
 

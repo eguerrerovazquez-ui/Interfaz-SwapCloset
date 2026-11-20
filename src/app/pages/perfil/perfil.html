@@ -16,4 +16,17 @@
   } @else {
     <p>No se encontraron datos para este usuario.</p>
   }
+
+  @if (datos_perfil){
+    <div class="info">
+      <p>Talla: {{datos_perfil.userTalla}}</p>
+      <p>Valoracion: {{datos_perfil.userValoracion}} ⭐</p>
+    </div>
+  }
+
+  <div class="grid-favoritos">
+    @for (publi of publis; track publi.userName) {
+      <app-publicaciones [publicaciones]="publi"></app-publicaciones>
+    }
+  </div>
 </ion-content>

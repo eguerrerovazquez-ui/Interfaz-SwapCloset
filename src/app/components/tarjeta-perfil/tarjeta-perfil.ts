@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Stories } from '../../models/stories';
-import {RouterLink} from '@angular/router';
-import {Publi} from '../../models/publi';
+import { RouterLink } from '@angular/router';
 
 @Component({
   imports: [
@@ -13,4 +12,5 @@ import {Publi} from '../../models/publi';
 })
 export class TarjetaPerfil {
   @Input() stories!: Stories;
+  @Input() rutaDestino: string = '/perfil';
 }

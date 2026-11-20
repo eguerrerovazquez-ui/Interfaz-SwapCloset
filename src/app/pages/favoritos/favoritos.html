@@ -10,6 +10,13 @@
 <!-- La barra de busqueda no sale pero hay persistencia de likes -->
 
 <ion-content>
+
+  <div class="filtros">
+    <button [class.activo]="filtroActivo === 'Ambos'" (click)="cambiarFiltro('Ambos')">Todos</button>
+    <button [class.activo]="filtroActivo === 'Prestamo'" (click)="cambiarFiltro('Prestamo')">Prestamo</button>
+    <button [class.activo]="filtroActivo === 'Cambio'" (click)="cambiarFiltro('Cambio')">Cambio</button>
+  </div>
+
   <div class="grid-favoritos">
     @for (publi of publicaciones; track publi.id) {
 

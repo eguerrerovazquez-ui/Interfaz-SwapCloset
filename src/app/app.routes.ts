@@ -5,6 +5,7 @@ import {Favoritos} from './pages/favoritos/favoritos';
 import {Buscar} from './pages/buscar/buscar';
 import {Mensajes} from './pages/mensajes/mensajes';
 import {Perfil} from './pages/perfil/perfil';
+import { ChatInterno } from './pages/chat-interno/chat-interno';
 
 export const routes: Routes = [
   {
@@ -21,6 +22,9 @@ export const routes: Routes = [
   },
   {
     path:'perfil/:userName', component: Perfil
+  },
+  {
+    path:'chat-interno/:userName', component: ChatInterno
   },
   { path: '**', redirectTo: 'home' }
 ];

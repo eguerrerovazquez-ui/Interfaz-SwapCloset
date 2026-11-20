@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/mensajes"></ion-back-button>
+    </ion-buttons>
+    <div class="top">
+      <ion-title>{{usuario}}</ion-title>
+      @if(datos){
+        <img [src]="datos" style="border-radius: 100%; width: 60px; height: 60px ">
+      }
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<div class="chat-input-wrapper">
+  <div class="chat-input-container">
+    <ion-input
+      placeholder="Escribe un mensaje..."
+      class="chat-input">
+    </ion-input>
+    <button class="send-button">
+      <ion-icon name="send"></ion-icon>
+    </button>
+  </div>
+</div>
