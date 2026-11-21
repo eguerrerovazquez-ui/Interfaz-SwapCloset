@@ -1,11 +1,39 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/buscar"></ion-back-button>
-    </ion-buttons>
-    <!-- Muestra el nombre en la barra superior si existe -->
+    <!-- AÑADIDO: Solo mostramos el botón de atrás si NO es tu perfil -->
+    @if (!esMiPerfil) {
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/buscar"></ion-back-button>
+      </ion-buttons>
+    }
+    @if (esMiPerfil) {
+      <ion-buttons slot="end">
+        <button class="opciones-boton" type="button" aria-label="Abrir opciones" (click)="opcionesPopover.present($event)">
+          <span aria-hidden="true">⋯</span>
+        </button>
+      </ion-buttons>
+    }
   </ion-toolbar>
 </ion-header>
+
+@if (esMiPerfil) {
+  <ion-popover #opcionesPopover cssClass="publicacion-popover">
+    <ng-template>
+      <ion-content class="ion-padding publicacion-contenido">
+        <div class="opciones-perfil-fila">
+          <span>Modo oscuro</span>
+          <input
+            class="opciones-perfil-switch"
+            type="checkbox"
+            role="switch"
+            aria-label="Modo oscuro"
+            [checked]="temaService.modoOscuro"
+            (change)="temaService.establecerModoOscuro($any($event.target).checked)">
+        </div>
+      </ion-content>
+    </ng-template>
+  </ion-popover>
+}
 
 <ion-content class="ion-padding">
   @if (datos) {
@@ -22,6 +50,55 @@
       <p>Talla: {{datos_perfil.userTalla}}</p>
       <p>Valoracion: {{datos_perfil.userValoracion}} ⭐</p>
     </div>
+  }
+
+  @if (esMiPerfil) {
+    <div class="perfil-accion">
+      <button class="boton-perfil" type="button" aria-label="Añadir publicación" (click)="abrirMenuPublicacion($event, publicacionPopover)">
+        <span aria-hidden="true">+</span>
+      </button>
+    </div>
+
+    <ion-popover #publicacionPopover cssClass="publicacion-popover">
+      <ng-template>
+        <ion-content class="ion-padding publicacion-contenido">
+          <div class="publicacion-encabezado">
+            <h2>Nueva publicación</h2>
+          </div>
+
+          <div class="publicacion-formulario">
+            <div class="publicacion-imagen" aria-label="Espacio para la imagen de la prenda">
+              <span>Foto de la prenda</span>
+            </div>
+
+            <label class="publicacion-campo">
+              <span>Talla</span>
+              <select aria-label="Talla">
+                @for (talla of tallas; track talla) {
+                  <option [value]="talla">{{ talla }}</option>
+                }
+              </select>
+            </label>
+
+            <label class="publicacion-campo">
+              <span>Tipo</span>
+              <select aria-label="Tipo">
+                @for (tipo of tiposDisponibles; track tipo) {
+                  <option [value]="tipo">{{ tipo }}</option>
+                }
+              </select>
+            </label>
+
+            <label class="publicacion-campo publicacion-descripcion">
+              <span>Descripción</span>
+              <textarea aria-label="Descripción" rows="3" placeholder="Describe la prenda"></textarea>
+            </label>
+
+            <button class="publicacion-aceptar" type="button">Aceptar</button>
+          </div>
+        </ion-content>
+      </ng-template>
+    </ion-popover>
   }
 
   <div class="grid-favoritos">

@@ -6,7 +6,9 @@
     </div>
     <div class="options"></div>
   </div>
-  <img [src]="publicaciones.userImage"/>
+  <a [routerLink]="['/perfil-publicacion', publicaciones.id]">
+    <img [src]="publicaciones.userImage"/>
+  </a>
   <div class="bottom">
     <div class="interactions">
       <button class="like" [class.postLiked]="publicaciones.postLiked" (click)="toggleLike()">

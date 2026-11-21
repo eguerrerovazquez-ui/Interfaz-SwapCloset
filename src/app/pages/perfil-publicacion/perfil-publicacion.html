@@ -1,0 +1,59 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar style="--background: transparent;">
+    <ion-buttons slot="start">
+      <!-- Este es el botón mágico que vuelve a la página anterior -->
+      <ion-back-button defaultHref="/home" text="" icon="arrow-back"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="top">
+    <p>{{publicacionEncontrada?.userName}}</p>
+    <img [src]="publicacionEncontrada?.userPfp">
+  </div>
+
+  <div class="imagen-publicacion">
+    <img [src]="publicacionEncontrada?.userImage">
+  </div>
+
+  <div class="info-publicacion">
+    <p>{{publicacionEncontrada!.type.toString()}}</p>
+    <p>{{publicacionEncontrada!.userTalla.toString()}}</p>
+  </div>
+
+  <div class="descipcion">
+    <p>{{publicacionEncontrada!.prendaDescripcion}}</p>
+  </div>
+
+  <div class="botones">
+    <button (click)="irAlChat()">Prestamo</button>
+    <button  (click)="abrirCalendario()">SWAP</button>
+  </div>
+</ion-content>
+
+<ion-popover #calendario cssClass="calendario-popover">
+  <ng-template>
+    <ion-content class="ion-padding calendario-contenido">
+      <div class="encabezado-calendario">
+        <h2>Propon el intercambio</h2>
+        <p>Elige las fechas disponibles</p>
+      </div>
+
+      <p class="etiqueta-fecha" style="text-align: center">Fecha de inicio</p>
+      <ion-datetime
+        presentation="date"
+        [max]="fechaFin"
+        (ionChange)="fechaInicio = $any($event).detail.value">
+      </ion-datetime>
+
+      <p class="etiqueta-fecha" style="text-align: center">Fecha de fin</p>
+      <ion-datetime
+        presentation="date"
+        [min]="fechaInicio"
+        (ionChange)="fechaFin = $any($event).detail.value">
+      </ion-datetime>
+      <ion-button class="confirmar-swap" expand="block">SWAP</ion-button>
+    </ion-content>
+  </ng-template>
+</ion-popover>

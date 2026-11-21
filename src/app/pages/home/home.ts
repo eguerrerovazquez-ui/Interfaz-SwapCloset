@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {IonBadge, IonButtons, IonContent, IonHeader, IonIcon, IonTabButton, IonTitle, IonToolbar} from '@ionic/angular';
+import { IonButton, IonButtons, IonContent, IonHeader, IonIcon, IonInput, IonItem, IonPopover, IonTitle, IonToolbar } from '@ionic/angular';
 import { mock_story } from '../../data/stories-data';
 import { Stories } from '../../models/stories';
 import { Story } from '../../components/story/story';
@@ -9,7 +9,7 @@ import { Publi } from '../../models/publi';
 import { PublicacionesService } from '../../services/publicaciones';
 
 @Component({
-  imports: [IonHeader, IonToolbar, IonTitle, IonIcon, IonContent, Story, Publicaciones, IonButtons],
+  imports: [IonHeader, IonToolbar, IonTitle, IonIcon, IonContent, Story, Publicaciones, IonButtons, IonPopover, IonInput, IonItem, IonButton],
   selector: 'app-home',
   styleUrl: './home.css',
   templateUrl: './home.html',
@@ -25,5 +25,9 @@ export class Home {
   constructor(private publicacionesService: PublicacionesService) {
     // 4. Asignamos la lista del servicio a nuestra variable
     this.publi = this.publicacionesService.publicaciones;
+  }
+
+  abrirLogin(event: MouseEvent, popover: IonPopover): void {
+    void popover.present(event);
   }
 }

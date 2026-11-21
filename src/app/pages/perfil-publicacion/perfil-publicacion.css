@@ -1,0 +1,177 @@
+/* 1. Fondo general de la página */
+ion-content {
+  --background: #FFEFE6;
+}
+
+/* 2. Cabecera (Igual) */
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 0 20px 20px 20px; /* Un pelín más de espacio abajo */
+}
+
+.top p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
+  order: 2;
+}
+
+.top img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  order: 1;
+  border: 2px solid #ffffff;
+}
+
+/* 3. Imagen principal (Igual) */
+.imagen-publicacion {
+  width: 100%;
+  padding: 0 16px;
+  box-sizing: border-box;
+  margin-bottom: 24px; /* Separación con el siguiente elemento */
+}
+
+.imagen-publicacion img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 24px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* 4. Información Tipo y Talla */
+.info-publicacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  margin-bottom: 24px; /* Separación con la descripción */
+}
+
+.info-publicacion p:first-child {
+  background-color: #FF8BEB;
+  color: #000000;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0;
+  box-shadow: 0 4px 12px rgba(255, 139, 235, 0.3);
+}
+
+.info-publicacion p:last-child {
+  background-color: #E1D5F5;
+  color: #4B367C;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0;
+  box-shadow: 0 4px 12px rgba(225, 213, 245, 0.5);
+}
+
+/* 5. Descripción (Caja más grande) */
+.descipcion {
+  padding: 0 16px; /* Reducimos el padding del contenedor para que la caja sea más ancha */
+  margin-bottom: 100px; /* Margen inferior para que los botones fijos no la tapen */
+}
+
+.descipcion p {
+  margin: 0;
+  font-size: 15px;
+  color: #555555;
+  line-height: 1.6; /* Un poco más de espacio entre líneas */
+  background-color: #ffffff;
+  padding: 24px; /* Aumentamos el padding para que la caja sea más grande */
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  min-height: 120px; /* Altura mínima para que no se vea vacía si hay poco texto */
+}
+
+/* 6. Botones (Fijos al fondo) */
+.botones {
+  position: fixed; /* Los fija en la pantalla */
+  bottom: 20px; /* Separación del borde inferior */
+  left: 16px;
+  right: 16px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  z-index: 100; /* Para que estén por encima del contenido */
+}
+
+.botones button {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  border-radius: 20px;
+  background-color: #FF7B2E;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.4);
+  transition: transform 0.2s ease;
+}
+
+.botones button:active {
+  transform: scale(0.95);
+}
+
+.calendario-contenido {
+  --background: #fffaf7;
+}
+
+.encabezado-calendario {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.encabezado-calendario h2 {
+  margin: 0;
+  color: #4B367C;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.encabezado-calendario p {
+  margin: 6px 0 0;
+  color: #756b7d;
+  font-size: 14px;
+}
+
+.etiqueta-fecha {
+  margin: 18px 0 8px;
+  color: #4B367C;
+  font-weight: 600;
+}
+
+ion-datetime {
+  width: 100%;
+  min-height: 300px;
+  border: 1px solid #E1D5F5;
+  border-radius: 18px;
+  --background: #ffffff;
+  --ion-color-primary: #FF7B2E;
+  --ion-color-primary-rgb: 255, 123, 46;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #e06c28;
+  --ion-color-primary-tint: #ff8843;
+}
+
+.confirmar-swap {
+  margin-top: 20px;
+  --background: #FF7B2E;
+  --background-activated: #e06c28;
+  --color: #ffffff;
+  --border-radius: 16px;
+  font-weight: 600;
+}

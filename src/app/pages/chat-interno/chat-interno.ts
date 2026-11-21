@@ -3,30 +3,35 @@ import { Publi } from '../../models/publi';
 import { ActivatedRoute } from '@angular/router';
 import {
   IonBackButton,
+  IonButton,
   IonButtons,
-  IonFooter,
+  IonContent,
   IonHeader,
   IonIcon,
-  IonImg,
   IonInput,
-  IonTextarea,
+  IonPopover,
+  IonRange,
   IonTitle,
   IonToolbar,
 } from '@ionic/angular';
 import { mock_story } from '../../data/stories-data';
 import { Stories } from '../../models/stories';
 import { addIcons } from 'ionicons';
-import {send} from 'ionicons/icons'
+import { arrowBack, send, star } from 'ionicons/icons';
 
 @Component({
   imports: [
     IonBackButton,
+    IonButton,
     IonButtons,
+    IonContent,
     IonHeader,
     IonToolbar,
     IonTitle,
     IonInput,
     IonIcon,
+    IonPopover,
+    IonRange,
   ],
   selector: 'app-chat-interno',
   styleUrl: './chat-interno.css',
@@ -39,6 +44,11 @@ export class ChatInterno {
 
   usuario: string = 'Perfil';
   datos: string = '';
+  valoracion = 3;
+
+  actualizarValoracion(event: { detail: { value: number } }) {
+    this.valoracion = event.detail.value;
+  }
 
   ngOnInit() {
     this.route.paramMap.subscribe((params) => {
@@ -52,6 +62,6 @@ export class ChatInterno {
   }
 
   constructor(){
-    addIcons({send})
+    addIcons({ arrowBack, send, star });
   }
 }

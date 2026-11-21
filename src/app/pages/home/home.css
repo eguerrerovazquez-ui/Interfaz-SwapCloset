@@ -94,4 +94,56 @@ ion-title{
   width: 100%;
 }
 
+.login-contenido {
+  --background: #fffaf7;
+  color: #4B367C;
+}
+
+.login-encabezado {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.login-encabezado h2 {
+  margin: 0;
+  color: #4B367C;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.login-encabezado p {
+  margin: 7px 0 0;
+  color: #756b7d;
+  font-size: 14px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.login-campo {
+  --background: #ffffff;
+  --border-radius: 14px;
+  --padding-start: 14px;
+  --inner-padding-end: 14px;
+  border: 1px solid #E1D5F5;
+  border-radius: 14px;
+}
+
+.login-enviar {
+  margin-top: 4px;
+  --background: #FF7B2E;
+  --background-activated: #e06c28;
+  --color: #ffffff;
+  --border-radius: 16px;
+  font-weight: 600;
+}
+
+.login-cerrar {
+  margin: 0;
+  --color: #756b7d;
+}
+
 

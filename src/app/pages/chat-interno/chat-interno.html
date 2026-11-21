@@ -1,16 +1,47 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar class="chat-toolbar">
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/mensajes"></ion-back-button>
+      <ion-back-button defaultHref="/mensajes" text="" icon="arrow-back"></ion-back-button>
     </ion-buttons>
-    <div class="top">
-      <ion-title>{{usuario}}</ion-title>
-      @if(datos){
-        <img [src]="datos" style="border-radius: 100%; width: 60px; height: 60px ">
-      }
-    </div>
+    <ion-title class="chat-title">
+      <div class="chat-identity">
+        @if(datos){
+          <img class="chat-avatar" [src]="datos" [alt]="usuario">
+        }
+        <span>{{usuario}}</span>
+      </div>
+    </ion-title>
+    <ion-buttons slot="end" class="chat-actions">
+      <button class="favorite-button" aria-label="Valorar" (click)="valoracionPopover.present($event)">
+        <ion-icon name="star"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
+
+<ion-popover #valoracionPopover cssClass="valoracion-popover">
+  <ng-template>
+    <ion-content class="ion-padding valoracion-contenido">
+      <div class="encabezado-valoracion">
+        <h2>Valora a esta persona</h2>
+        <p>Desliza para elegir una puntuación</p>
+      </div>
+
+      <p class="puntuacion-valoracion" aria-live="polite">{{valoracion}} / 5</p>
+      <ion-range
+        aria-label="Valoración del intercambio"
+        [min]="1"
+        [max]="5"
+        [step]="1"
+        [snaps]="true"
+        [ticks]="true"
+        [value]="valoracion"
+        (ionChange)="actualizarValoracion($any($event))">
+      </ion-range>
+      <ion-button class="cerrar-valoracion" expand="block" (click)="valoracionPopover.dismiss()">Hecho</ion-button>
+    </ion-content>
+  </ng-template>
+</ion-popover>
 
 <div class="chat-input-wrapper">
   <div class="chat-input-container">

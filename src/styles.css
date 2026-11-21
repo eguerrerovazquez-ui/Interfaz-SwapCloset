@@ -10,7 +10,246 @@ ion-content {
   --background: #FFEFE6 !important;
 }
 
+ion-back-button {
+  --background: #ffffff;
+  --background-activated: #ffe0cc;
+  --background-focused: #fff3e9;
+  --background-hover: #fff3e9;
+  --color: #FF7B2E;
+  --color-activated: #D95E18;
+  --color-focused: #E96A20;
+  --color-hover: #E96A20;
+  --border-radius: 50%;
+  --padding-start: 0;
+  --padding-end: 0;
+  --icon-font-size: 22px;
+  --icon-margin-start: 0;
+  --icon-margin-end: 0;
+}
+
+ion-back-button::part(native) {
+  width: 42px;
+  height: 42px;
+  min-width: 42px;
+  border-radius: 50%;
+  box-shadow: 0 3px 10px rgb(75 54 124 / 0.15);
+}
+
+ion-back-button::part(text) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.calendario-popover,
+.valoracion-popover,
+.login-popover,
+.publicacion-popover {
+  --width: min(94vw, 370px);
+  --max-width: 370px;
+  --max-height: 90vh;
+  --background: #fffaf7;
+  --box-shadow: 0 14px 40px rgb(75 54 124 / 0.22);
+  --backdrop-opacity: 0.25;
+}
+
+.calendario-popover::part(content),
+.valoracion-popover::part(content),
+.login-popover::part(content),
+.publicacion-popover::part(content) {
+  overflow: hidden;
+  border: 1px solid #E1D5F5;
+  border-radius: 24px;
+}
+
+.calendario-popover ion-content.calendario-contenido {
+  --background: #fffaf7 !important;
+}
+
+.valoracion-popover ion-content.valoracion-contenido {
+  --background: #fffaf7 !important;
+}
+
+.login-popover ion-content.login-contenido {
+  --background: #fffaf7 !important;
+}
+
+.publicacion-popover ion-content.publicacion-contenido {
+  --background: #fffaf7 !important;
+}
+
 /* 3. Nos aseguramos de que los contenedores base no tengan un fondo blanco que tape el tuyo */
 body, ion-app, ion-router-outlet, .ion-page {
   background-color: #FFEFE6 !important;
+}
+
+html.modo-oscuro {
+  color-scheme: dark;
+  --ion-background-color: #1d1922 !important;
+  --ion-background-color-rgb: 29, 25, 34;
+  --ion-text-color: #f5eff8;
+  --ion-text-color-rgb: 245, 239, 248;
+  --ion-item-background: #2a2430;
+  --ion-card-background: #2a2430;
+  --ion-toolbar-background: #1d1922;
+  --ion-tab-bar-background: #2a2430;
+  --ion-border-color: #4a4052;
+  --app-dark-surface: #2a2430;
+  --app-dark-surface-raised: #342d3b;
+  --app-dark-text: #f5eff8;
+  --app-dark-muted: #c6bacd;
+}
+
+html.modo-oscuro body,
+html.modo-oscuro ion-app,
+html.modo-oscuro ion-router-outlet,
+html.modo-oscuro .ion-page {
+  background-color: #1d1922 !important;
+  color: #f5eff8;
+}
+
+html.modo-oscuro ion-content {
+  --background: #1d1922 !important;
+  --color: #f5eff8;
+  color: #f5eff8;
+}
+
+html.modo-oscuro ion-header,
+html.modo-oscuro ion-toolbar {
+  --background: #1d1922 !important;
+  --color: #f5eff8 !important;
+  background: #1d1922 !important;
+  color: #f5eff8 !important;
+}
+
+html.modo-oscuro ion-tab-bar {
+  --background: #2a2430 !important;
+  background: #2a2430 !important;
+  border-color: #4a4052;
+}
+
+html.modo-oscuro ion-tab-button {
+  --color: #d3c7db;
+  --color-selected: #FF7B2E;
+}
+
+html.modo-oscuro .search-header {
+  background-color: #1d1922 !important;
+}
+
+html.modo-oscuro .custom-searchbar {
+  --background: #342d3b !important;
+  --box-shadow: 0 8px 24px rgb(0 0 0 / 0.4);
+  --color: #f5eff8;
+}
+
+html.modo-oscuro ion-item,
+html.modo-oscuro ion-input,
+html.modo-oscuro ion-textarea,
+html.modo-oscuro ion-select {
+  --background: #342d3b !important;
+  --color: #f5eff8;
+  --placeholder-color: #c6bacd;
+  --border-color: #4a4052;
+}
+
+html.modo-oscuro ion-back-button {
+  --background: #342d3b;
+  --background-activated: #4a4052;
+  --background-focused: #403747;
+  --background-hover: #403747;
+  --color: #FF7B2E;
+}
+
+html.modo-oscuro ion-popover {
+  --background: #2a2430;
+  --color: #f5eff8;
+  --box-shadow: 0 14px 40px rgb(0 0 0 / 0.45);
+}
+
+html.modo-oscuro ion-popover::part(content) {
+  border-color: #4a4052;
+}
+
+html.modo-oscuro .calendario-popover,
+html.modo-oscuro .valoracion-popover,
+html.modo-oscuro .login-popover,
+html.modo-oscuro .publicacion-popover {
+  --background: #2a2430;
+}
+
+html.modo-oscuro .calendario-popover ion-content.calendario-contenido,
+html.modo-oscuro .valoracion-popover ion-content.valoracion-contenido,
+html.modo-oscuro .login-popover ion-content.login-contenido,
+html.modo-oscuro .publicacion-popover ion-content.publicacion-contenido {
+  --background: #2a2430 !important;
+  --color: #f5eff8;
+  color: #f5eff8;
+}
+
+html.modo-oscuro .post-wrapper,
+html.modo-oscuro .tarjeta,
+html.modo-oscuro .chat-input-container,
+html.modo-oscuro .descipcion p,
+html.modo-oscuro .login-campo,
+html.modo-oscuro .publicacion-campo select,
+html.modo-oscuro .publicacion-campo textarea,
+html.modo-oscuro .publicacion-imagen {
+  background-color: #2a2430 !important;
+  color: #f5eff8 !important;
+  border-color: #4a4052;
+}
+
+html.modo-oscuro .publicacion-imagen {
+  background: #342d3b !important;
+  color: #c6bacd !important;
+}
+
+html.modo-oscuro .post-wrapper .profile p,
+html.modo-oscuro .post-wrapper .state p,
+html.modo-oscuro .tarjeta p,
+html.modo-oscuro .top p,
+html.modo-oscuro .descipcion p,
+html.modo-oscuro .info-publicacion p:last-child,
+html.modo-oscuro .login-encabezado h2,
+html.modo-oscuro .login-encabezado p,
+html.modo-oscuro .login-cerrar,
+html.modo-oscuro .encabezado-calendario h2,
+html.modo-oscuro .encabezado-calendario p,
+html.modo-oscuro .etiqueta-fecha,
+html.modo-oscuro .encabezado-valoracion h2,
+html.modo-oscuro .encabezado-valoracion p,
+html.modo-oscuro .opciones-perfil-fila,
+html.modo-oscuro .publicacion-encabezado h2,
+html.modo-oscuro .publicacion-campo {
+  color: #f5eff8 !important;
+}
+
+html.modo-oscuro .info-publicacion p:first-child {
+  color: #2b1d2b;
+}
+
+html.modo-oscuro .info-publicacion p:last-child {
+  background-color: #403747;
+}
+
+html.modo-oscuro .post-wrapper .state {
+  background-color: #365b48;
+}
+
+html.modo-oscuro .calendario-popover ion-datetime {
+  --background: #342d3b !important;
+  --ion-color-step-50: #342d3b;
+  --ion-color-step-100: #403747;
+  color: #f5eff8;
+}
+
+html.modo-oscuro .opciones-perfil-fila {
+  color: #f5eff8;
 }

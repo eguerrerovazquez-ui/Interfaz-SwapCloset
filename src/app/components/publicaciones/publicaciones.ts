@@ -1,11 +1,12 @@
 import { ChangeDetectorRef, Component, Input } from '@angular/core';
 import { Publi } from '../../models/publi';
 import { CommonModule } from '@angular/common';
-import { IonIcon } from '@ionic/angular';
+import { IonIcon, NavController } from '@ionic/angular';
 import { PublicacionesService } from '../../services/publicaciones';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  imports: [IonIcon],
+  imports: [IonIcon, RouterLink],
   standalone: true,
   selector: 'app-publicaciones',
   styleUrl: './publicaciones.css',
@@ -18,6 +19,7 @@ export class Publicaciones {
     private publicacionesService: PublicacionesService,
     private cdr: ChangeDetectorRef, // 2. Lo inyectamos
   ) {}
+
 
   toggleLike() {
     // 3. El servicio cambia el dato

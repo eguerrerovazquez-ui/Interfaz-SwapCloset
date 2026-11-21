@@ -17,13 +17,50 @@
 
     <!-- Botón de login (Derecha) -->
     <ion-buttons slot="end">
-      <button class="login-btn" >
+      <button class="login-btn" type="button" aria-label="Iniciar sesión" (click)="abrirLogin($event, loginPopover)">
         <ion-icon class="login" src="/assets/icons/Login.svg"></ion-icon>
       </button>
     </ion-buttons>
 
   </ion-toolbar>
 </ion-header>
+
+<ion-popover #loginPopover cssClass="login-popover">
+  <ng-template>
+    <ion-content class="ion-padding login-contenido">
+      <div class="login-encabezado">
+        <h2>Iniciar sesión</h2>
+        <p>Accede a tu cuenta de SwapCloset</p>
+      </div>
+
+      <div class="login-form">
+        <ion-item class="login-campo" lines="none">
+          <ion-input
+            label="Correo electrónico"
+            labelPlacement="stacked"
+            type="email"
+            name="email"
+            autocomplete="email">
+          </ion-input>
+        </ion-item>
+
+        <ion-item class="login-campo" lines="none">
+          <ion-input
+            label="Contraseña"
+            labelPlacement="stacked"
+            type="password"
+            name="password"
+            autocomplete="current-password">
+          </ion-input>
+        </ion-item>
+
+        <ion-button class="login-enviar" type="button" expand="block">Iniciar sesión</ion-button>
+        <ion-button class="login-cerrar" type="button" fill="clear" expand="block" (click)="loginPopover.dismiss()">Cerrar</ion-button>
+      </div>
+    </ion-content>
+  </ng-template>
+</ion-popover>
+
 <ion-content>
   <div class="historias">
     @for (story of story; track story.id){

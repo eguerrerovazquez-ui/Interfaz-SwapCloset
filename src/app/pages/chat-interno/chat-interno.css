@@ -1,14 +1,111 @@
-.top{
+ion-header {
+  background: #FFEFE6;
+}
+
+ion-toolbar.chat-toolbar {
+  --background: #FFEFE6;
+  --color: #4B367C;
+}
+
+ion-buttons[slot='start'],
+ion-buttons[slot='end'] {
+  min-width: 48px;
+}
+
+ion-buttons[slot='end'] {
+  justify-content: flex-end;
+}
+
+ion-title.chat-title {
+  min-width: 0;
+  padding-inline: 8px;
+}
+
+.chat-identity {
   display: flex;
-  justify-content: space-between !important;
-  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-width: 0;
 }
-ion-header{
+
+.chat-avatar {
+  flex: 0 0 42px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.chat-title span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.favorite-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  color: #FF7B2E;
   background: transparent;
+  border: 0;
 }
-ion-toolbar{
-  background: transparent;
+
+.favorite-button ion-icon {
+  font-size: 24px;
 }
+
+.valoracion-contenido {
+  --background: #fffaf7;
+}
+
+.encabezado-valoracion {
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.encabezado-valoracion h2 {
+  margin: 0;
+  color: #4B367C;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.encabezado-valoracion p {
+  margin: 6px 0 0;
+  color: #756b7d;
+  font-size: 14px;
+}
+
+.puntuacion-valoracion {
+  margin: 8px 0 0;
+  color: #FF7B2E;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+
+ion-range {
+  --bar-background: #E1D5F5;
+  --bar-background-active: #FF7B2E;
+  --knob-background: #FF7B2E;
+  --pin-background: #4B367C;
+  --pin-color: #ffffff;
+  --tick-background: #756b7d;
+}
+
+.cerrar-valoracion {
+  margin-top: 16px;
+  --background: #FF7B2E;
+  --background-activated: #e06c28;
+  --color: #ffffff;
+  --border-radius: 16px;
+  font-weight: 600;
+}
+
 /* 1. El contenedor que lo fija al fondo de la pantalla */
 .chat-input-wrapper {
   position: fixed;

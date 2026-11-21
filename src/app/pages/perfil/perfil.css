@@ -2,6 +2,55 @@ ion-header{
   background-color: transparent;
 }
 
+.opciones-boton {
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #FF7B2E;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.opciones-boton:focus-visible {
+  outline: 3px solid #4B367C;
+  outline-offset: 3px;
+}
+
+.opciones-boton span {
+  line-height: 1;
+}
+
+.opciones-perfil-fila {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px;
+  color: #4B367C;
+  font-weight: 600;
+}
+
+.opciones-perfil-switch {
+  appearance: none;
+  width: 48px;
+  height: 28px;
+  margin: 0;
+  border-radius: 999px;
+  background: radial-gradient(circle at 14px, #ffffff 0 10px, transparent 11px), #d7cde3;
+  cursor: pointer;
+}
+
+.opciones-perfil-switch:checked {
+  background: radial-gradient(circle at 34px, #ffffff 0 10px, transparent 11px), #FF7B2E;
+}
+
+.opciones-perfil-switch:focus-visible {
+  outline: 3px solid #4B367C;
+  outline-offset: 3px;
+}
+
 .perfil-detalle{
   display: flex;
   justify-content: center;
@@ -31,6 +80,115 @@ h1{
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
+}
+
+.perfil-accion {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.boton-perfil {
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: #FF7B2E;
+  box-shadow: 0 4px 8px #707070;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.boton-perfil span {
+  display: block;
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.boton-perfil:focus-visible {
+  outline: 3px solid #4B367C;
+  outline-offset: 3px;
+}
+
+.publicacion-contenido {
+  --background: #fffaf7;
+  color: #4B367C;
+}
+
+.publicacion-encabezado {
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.publicacion-encabezado h2 {
+  margin: 0;
+  color: #4B367C;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.publicacion-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.publicacion-imagen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  width: 112px;
+  height: 112px;
+  border: 1px dashed #aaa4ad;
+  border-radius: 12px;
+  background: #d8d6d8;
+  color: #625e65;
+  font-size: 13px;
+  text-align: center;
+}
+
+.publicacion-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #4B367C;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.publicacion-campo select,
+.publicacion-campo textarea {
+  width: 100%;
+  border: 1px solid #E1D5F5;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #3e3548;
+  font: inherit;
+  font-weight: 400;
+}
+
+.publicacion-campo select {
+  min-height: 42px;
+  padding: 8px 12px;
+}
+
+.publicacion-campo textarea {
+  min-height: 76px;
+  padding: 10px 12px;
+  resize: vertical;
+}
+
+.publicacion-aceptar {
+  min-height: 44px;
+  border: 0;
+  border-radius: 14px;
+  background: #FF7B2E;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 /* Aseguramos que la cuadrícula se dibuje debajo */
