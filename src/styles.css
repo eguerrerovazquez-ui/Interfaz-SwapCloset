@@ -89,6 +89,8 @@ body, ion-app, ion-router-outlet, .ion-page {
   background-color: #FFEFE6 !important;
 }
 
+/*===================Modo Oscuro=============================================*/
+
 html.modo-oscuro {
   color-scheme: dark;
   --ion-background-color: #1d1922 !important;
